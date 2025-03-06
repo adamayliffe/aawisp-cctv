@@ -45,9 +45,9 @@ nav {
 }
 
 .appointment-btn {
-    background-color: white;
+    background-color: orange;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .faq {
