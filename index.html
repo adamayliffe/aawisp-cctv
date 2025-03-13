@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAWISP & CCTV</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    .arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">AAWISP & CCTV</div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+                <li><a href="protfolio.html">Portfolio</a></li>
+                <li><a href="appointments.html" class="appointment-btn">Appointment</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <div class="container">
+        <div class="section" id="section1">
+            <h1>Section 1</h1>
+            <p>This is the first section.</p>
+            <button onclick="nextSection()"><p><i class="arrow right"></i></p></button>
+        </div>
+        <div class="section" id="section2">
+            <h1>Section 2</h1>
+            <p>This is the second section.</p>
+            <button onclick="prevSection()"><p><i class="arrow left"></i></p></button>
+             <button onclick="nextSection()"><p><i class="arrow right"></i></p></button>
+        </div>
+        <div class="section" id="section3">
+            <h1>Section 3</h1>
+            <p>This is the third section.</p>
+            <button onclick="prevSection()"><p><i class="arrow left"></i></p></button>
+             <button onclick="nextSection()"><p><i class="arrow right"></i></p></button>
+        </div>
+        <div class="section" id="section4">
+            <h1>Section 4</h1>
+            <p>This is the forth section.</p>
+            <button onclick="prevSection()"><p><i class="arrow left"></i></p></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                question.nextElementSibling.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
